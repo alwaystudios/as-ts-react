@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@alwaystudios/as-ui-components": "^1.0.10",
+    "@alwaystudios/as-ui-components": "^1.0.16",
     "@alwaystudios/as-utils": "^1.0.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -16,6 +16,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0",
+    "superagent": "^6.1.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -38,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.4",
+    "@types/superagent": "^4.1.10"
   }
 }

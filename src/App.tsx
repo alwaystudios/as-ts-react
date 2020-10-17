@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useInterval } from "@alwaystudios/as-ui-components";
+import React, { useState } from "react";
+import { Header } from "./components/Header";
+import { Tweet } from "./components/Tweet";
+import { sanitiseTweets } from "./sanitiseTweets";
+import { getTweets } from "./twitterClient";
+import { Tweet as TweetType } from "./types";
 
-function App() {
+const INTERVAL = 2000;
+
+const App = () => {
+  const [tweets, setTweets] = useState<TweetType[]>([]);
+  var requestInFlight = false;
+  var lastId = 0;
+
+  useInterval(() => {
+    if (!requestInFlight) {
+      requestInFlight = true;
+      getTweets(lastId).then(async (newTweets) => {
+        if (newTweets.length > 0) {
+          const sanitisedTweets = sanitiseTweets([...newTweets, ...tweets]);
+          lastId = newTweets[0].id;
+          setTweets((_) => sanitisedTweets);
+          requestInFlight = false;
+        }
+      });
+    }
+  }, INTERVAL);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Header />
+      {tweets.length ? (
+        <>
+          {tweets.map(({ id, image, text, username }) => (
+            <Tweet key={id} image={image} text={text} username={username} />
+          ))}
+        </>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "1rem",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Loading Tweets...
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default App;
