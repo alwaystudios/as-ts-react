@@ -2,14 +2,15 @@
 # yarn lockfile v1
 
 
-"@alwaystudios/as-ui-components@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.16.tgz#348b2242752c71ba91b8f71433973f1052e0b339"
-  integrity sha512-88vcy/Mj+XExhIrVM8MvFS9+4qvK7602iX47AaUr+3u43WNCP1eUe9ZDWXEVZsKtt6FYWcsCvV4CjFGjh0ClZw==
+"@alwaystudios/as-ui-components@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.20.tgz#14f5d5958eb56246bedbec6e7e2287a3bbabb544"
+  integrity sha512-dtsd7oSeumSN8a2d+H98PgbYwUcy7VVWWguyaSnv0v9V9SYaTwa0DHh8gZqiydaukRRxL60c6GK37hJITBs57g==
   dependencies:
     "@alwaystudios/as-utils" "^1.0.6"
     array-move "^3.0.1"
     react-sortable-hoc "^1.11.0"
+    shortid "^2.2.15"
     styled-components "^5.2.0"
     universal-cookie "^4.0.4"
 
@@ -7103,6 +7104,11 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
+nanoid@^2.1.0:
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.11.tgz#ec24b8a758d591561531b4176a01e3ab4f0f0280"
+  integrity sha512-s/snB+WGm6uwi0WjsZdaVcuf3KJXlfGl2LcxgwkEwJF0D/BWzVWAZW/XY4bFaiR7s0Jk3FPvlnepg1H1b1UwlA==
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -9595,6 +9601,13 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
+
+shortid@^2.2.15:
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.16.tgz#b742b8f0cb96406fd391c76bfc18a67a57fe5608"
+  integrity sha512-Ugt+GIZqvGXCIItnsL+lvFJOiN7RYqlGy7QE41O3YC1xbNSeDGIRO7xg2JJXIAj1cAGnOeC1r7/T9pgrtQbv4g==
+  dependencies:
+    nanoid "^2.1.0"
 
 side-channel@^1.0.2:
   version "1.0.2"

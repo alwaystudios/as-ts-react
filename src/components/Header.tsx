@@ -26,6 +26,6 @@ export const Header = () => (
       src="https://media-exp1.licdn.com/dms/image/C4D03AQG1VRjvr-JfHw/profile-displayphoto-shrink_100_100/0?e=1607558400&v=beta&t=qauuybGQWNCBsM_kgLdn5F_bxW23yrMRpEleKesYSlQ"
       alt="profile"
     />
-    <div className="headline">Twitter feed - Gary Alway</div>
+    <div className="headline">React test app</div>
   </Container>
 );
