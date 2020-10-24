@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alwaystudios/as-ui-components@^1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.20.tgz#14f5d5958eb56246bedbec6e7e2287a3bbabb544"
-  integrity sha512-dtsd7oSeumSN8a2d+H98PgbYwUcy7VVWWguyaSnv0v9V9SYaTwa0DHh8gZqiydaukRRxL60c6GK37hJITBs57g==
+"@alwaystudios/as-ui-components@^1.0.22":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.22.tgz#3d585eb5d71532b07a33b6cd4fc773812eb8f19f"
+  integrity sha512-Gjwwb1z/YPKe4W3VIqZtzZS3/2Dk9HwWEVfv5Ng9DW3IZHip8vHaTrwJvC3onmk8vCK8/eDVC5ATxBcxsjDveg==
   dependencies:
     "@alwaystudios/as-utils" "^1.0.6"
     array-move "^3.0.1"
