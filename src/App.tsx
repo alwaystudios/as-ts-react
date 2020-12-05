@@ -1,59 +1,35 @@
-import { useThrottledRequests, useAsync } from "@alwaystudios/as-ui-components";
-import React, { useState } from "react";
+import { useShoppingCart } from "@alwaystudios/as-ui-components";
+import React from "react";
 import "./App.css";
+import { ItemComponent } from "./components/ItemComponent";
+import { StickySidebar } from "./components/StickySidebar";
+import { Product, testProduct } from "./types";
+
+const products = [...Array(20)].map(testProduct);
 
 const App = () => {
-  const [parallel, setParallel] = useState<number>(10);
-  const [requestCount, setRequestCount] = useState<number>(1000);
-  const { throttleActions, throttleProgress } = useThrottledRequests(parallel);
-
-  const requestsToMake = Array.from(Array(requestCount)).map(
-    (_, index) => async () => {
-      try {
-        const response = await fetch(
-          `/manifest.json?querystringValueToPreventCaching=${new Date()}_request-${index}`
-        );
-        const json = await response.json();
-
-        throttleActions.requestSucceededWithData(json);
-      } catch (error) {
-        throttleActions.requestFailedWithError(error);
-      }
-    }
-  );
-
-  const { callback } = useAsync(async () => {
-    await throttleActions.queueRequests(requestsToMake);
-  });
+  const { updateCart, removeProduct, items } = useShoppingCart<Product>();
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>useThrottledRequests</h1>
-        Max parallel:
-        <input
-          value={parallel}
-          onChange={(event) => setParallel(Number(event.currentTarget.value))}
-        />
-        Requests:
-        <input
-          value={requestCount}
-          onChange={(event) =>
-            setRequestCount(Number(event.currentTarget.value))
-          }
-        />
-        <button onClick={callback}>Fire</button>
-        {throttleProgress.loading && <div>Loading</div>}
-        {throttleProgress.values.length > 0 && (
-          <div>
-            {throttleProgress.values.length} requests completed successfully
-          </div>
-        )}
-        {throttleProgress.errors.length > 0 && (
-          <div>{throttleProgress.errors.length} requests errored</div>
-        )}
-      </header>
-    </div>
+    <>
+      <header></header>
+      <main>
+        <article className="article">
+          <h2>Online store</h2>
+          <ul className="items grid">
+            {products.map((item) => (
+              <ItemComponent
+                onClick={() => updateCart(item)}
+                key={item.title}
+                product={item}
+              />
+            ))}
+          </ul>
+        </article>
+        <StickySidebar onRemove={removeProduct} items={items} />
+      </main>
+      <footer></footer>
+    </>
   );
 };
 

@@ -2,28 +2,12 @@
   "name": "as-ts-react",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@alwaystudios/as-ui-components": "^1.0.22",
-    "@alwaystudios/as-utils": "^1.0.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "styled-components": "^5.2.0",
-    "superagent": "^6.1.0",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "upgrade-libs": "yarn upgrade @alwaystudios/as-ui-components@latest yarn upgrade @alwaystudios/as-utils@latest"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,8 +24,27 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@alwaystudios/as-ui-components": "^1.0.34",
+    "@alwaystudios/as-utils": "^1.0.12",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0",
+    "superagent": "^6.1.0",
+    "typescript": "~3.7.2"
+  },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/faker": "^5.1.4",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.1.4",
-    "@types/superagent": "^4.1.10"
+    "@types/superagent": "^4.1.10",
+    "faker": "^5.1.0"
   }
 }
