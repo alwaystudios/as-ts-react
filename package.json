@@ -25,8 +25,8 @@
     ]
   },
   "dependencies": {
-    "@alwaystudios/as-ui-components": "^1.0.34",
-    "@alwaystudios/as-utils": "^1.0.12",
+    "@alwaystudios/as-ui-components": "^1.0.35",
+    "@alwaystudios/as-utils": "^1.0.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",

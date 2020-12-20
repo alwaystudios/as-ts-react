@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alwaystudios/as-ui-components@^1.0.34":
-  version "1.0.34"
-  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.34.tgz#54a81fe558ba9c4925cdb9476071e0488f9f6210"
-  integrity sha512-Ul1GyPkk0MdS4hdDvOLyxlhyPjwPnX/MSaydk77eiHvHpyLZ5XnBczISAyRmbgFYAWkssPaIhv4kXICk9yqIsQ==
+"@alwaystudios/as-ui-components@^1.0.35":
+  version "1.0.35"
+  resolved "https://registry.yarnpkg.com/@alwaystudios/as-ui-components/-/as-ui-components-1.0.35.tgz#23ee07961265293b559911638b4b83291e046295"
+  integrity sha512-ghUpd2nFf1ah58Ve8JQaQRX3FCnqDKbIycTbWVZZBuBvv2/tcrPaYPNMuCg4K6MAbUgENXgRvevjKBLA4uqLYQ==
   dependencies:
     "@alwaystudios/as-utils" "^1.0.11"
     array-move "^3.0.1"
@@ -24,12 +24,14 @@
   dependencies:
     promised-csv "^1.0.1"
 
-"@alwaystudios/as-utils@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@alwaystudios/as-utils/-/as-utils-1.0.12.tgz#3f225915c982c58acd47f90592dc0e06aedfde1b"
-  integrity sha512-wx7KNjjOD69SArc14LhEwMdOUv5BgnZkMrLe6GFHuRwt2SZAL4yAivpnWKbZokkZHCe0vCdgIsh49GJ8uS8x1A==
+"@alwaystudios/as-utils@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@alwaystudios/as-utils/-/as-utils-1.0.14.tgz#b5f3f1e14a824e8dd9c54bf0b9f664953f7fa593"
+  integrity sha512-ZeTqEXxldcunCotSNZMwjzWfqnVljftyhQPl4YbtHiua8W4LdEalBMsXaWdPqiddZ9LBCGwJtbi94j34L63yFQ==
   dependencies:
+    deep-object-diff "^1.1.0"
     promised-csv "^1.0.1"
+    ramda "^0.27.1"
 
 "@babel/code-frame@7.8.3":
   version "7.8.3"
@@ -3859,6 +3861,11 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
+
+deep-object-diff@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/deep-object-diff/-/deep-object-diff-1.1.0.tgz#d6fabf476c2ed1751fc94d5ca693d2ed8c18bc5a"
+  integrity sha512-b+QLs5vHgS+IoSNcUE4n9HP2NwcHj7aqnJWsjPtuG75Rh5TOaGt0OjAYInh77d5T16V5cRDC+Pw/6ZZZiETBGw==
 
 default-gateway@^4.2.0:
   version "4.2.0"
